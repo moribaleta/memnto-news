@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar color='primary'>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>memnto-news</ion-title>
+        <!--<div class="search_box">
+            
+        </div>-->
+        <!--<ion-input class='search_box_input' type="text" placeholder="search.."></ion-input>    
+        <button class='search_button' (click)='search()'>
+            <ion-icon class='icon' name="search"></ion-icon>
+        </button>-->
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class='content_page'>
+
+    <ion-list>    
+
+        <ion-list-header>Top Headlines</ion-list-header>            
+        <ion-slides>
+            <ion-slide *ngFor='let item of articles'>
+                <div class="slide-content">                    
+                    <img src="{{item.urlToImage}}"/>   
+                    <div class="desc">
+                        <h1>{{item.title}}</h1> 
+                        <ion-badge (click)='selectSourceBadge(item.source)'>{{item.source}}</ion-badge>
+                        <a (click)='openStory(item)'>read more...</a> 
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+
+
+
+        <ion-list-header>News Sources</ion-list-header>
+        <button ion-item *ngFor='let source of sources' (click)='selectSource(source)' navPush>
+            {{source.name}}
+        </button>
+    
+    </ion-list>
+
+</ion-content>

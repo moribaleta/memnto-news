@@ -1,0 +1,46 @@
+page-articles {
+    padding: 0!important;
+    ion-content{
+        animation: up 1s;
+        ion-card{
+            cursor: pointer;            
+            min-width: 270px!important;
+            width: 25% !important;
+            float: left;
+            //box-shadow: 0 0 8px 3px rgba(0,0,0,0.2)!important;        
+            transition: all 0.3s ease-in-out;
+
+            img{
+                display: inline-block;
+                min-height: 200px;
+            }
+
+            ion-card-title{            
+                font-size: 16px !important;
+            }
+            p{
+            }
+            a{
+                cursor: pointer;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            ion-card{ 
+                width: 100%!important; 
+            }
+        }
+        
+        @media only screen and (min-width:601px) and (max-width: 1120px){
+            ion-card{ 
+                width: 50%!important; 
+            }
+        }
+        
+    }
+
+
+}
+
+
+

@@ -1,0 +1,57 @@
+/*
+page-home {    
+    ion-slides{      
+        padding: 0!important;
+
+        ion-slide{
+            padding: 0!important;
+
+            ion-item{          
+            .slide-content{
+                background-color: black!important;     
+                height: 400px!important;                
+                text-align: center;
+
+                img{
+                    width: auto;    
+                    height: 100%!important;
+                }
+
+                .desc{                            
+                    background-color: rgba(0,0,0,0)!important;
+                    position: absolute;
+                    bottom: 0;                
+                    color: white;    
+                    padding: 10px;
+                    text-align: left;
+                    width: 95%;
+
+                    h6{
+                        width: 300px;
+                        height: 39px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;                        
+                    }                                        
+
+                    ion-badge{
+                        right: 0;
+                        position: absolute;
+                    }
+
+                }
+            }    
+            @media screen and (max-width: 800px) {
+                .slide-content{ 
+                    img{
+                        width: 100%!important; 
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}
+*/

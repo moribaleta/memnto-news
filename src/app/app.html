@@ -1,0 +1,35 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar color='primary'>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class='subcat'>
+        <ion-list class='subcat'>
+            <ion-item class="weather">
+                <!--<h1>{{lat}}</h1>
+                <h1>{{long}}</h1>-->
+                <!--<h1>{{weather.Text}}</h1>
+                <h2>{{weather.Category}}</h2>-->
+            </ion-item>
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                {{p.title}}
+            </button>
+            <button ion-item *ngFor="let subcategory of category" (click) = 'openSubcat(subcategory)'>
+                {{subcategory}}
+            </button>    
+            <!--
+<ion-list>
+<ion-item *ngFor='let source of source'>                    
+<button *ngIf='source.category == subcategory'>{{source.name}}</button>
+</ion-item>
+</ion-list>                
+</ion-item>-->
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

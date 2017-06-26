@@ -1,0 +1,156 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+ion-header{
+    ion-navbar{        
+        .search_box{
+            width: 200px;   
+            height: 30px;
+            margin: 12px 50px;
+            background-color: white;
+            border-radius: 10px;
+            position: absolute;            
+            right: 0;
+            top: 0;      
+            font-size: 12px;
+        }
+        .search_box_input{            
+            width: 200px;    
+            position: absolute;            
+            right: 0;
+            top: 6px;
+            margin-right: 50px;            
+            font-size: 12px;
+        }
+        .search_button{
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #488aff;
+            height: 100%;
+            padding: 10px;
+            .icon{
+                font-size: 32px;                
+                color: white;                
+            }
+
+        }                
+    }
+}
+
+.subcat{
+    /*overflow: auto!important;
+    height: 600px;*/
+    overflow: hidden!important;   
+}
+
+.scroll-content {
+    overflow-y: auto!important;
+}
+
+.content_page{
+    animation: up 1s;
+}
+
+
+
+ion-slides{   
+    
+    padding: 0!important;
+
+    ion-slide{
+        animation: slidein 1s;
+        padding: 0!important;
+
+        /*ion-item{          */
+        .slide-content{
+            background-color: black!important;     
+            height: 400px!important;                
+            text-align: center;
+
+            img{
+                width: auto!important;    
+                height: 100%!important;
+                left: -100%;
+                right: -100%;
+                top: -100%;
+                bottom: -100%;
+                opacity: 0.5;
+            }
+
+            .desc{                            
+                background-color: rgba(0,0,0,0)!important;
+                position: absolute;
+                bottom: 0;                
+                color: white;    
+                padding: 10px;
+                text-align: left;
+                width: 95%;
+
+                h6{
+                    width: 300px;
+                    height: 39px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;                        
+                }                                        
+
+                ion-badge{
+                    right: 0;
+                    position: absolute;
+                }
+                a{
+                    cursor: pointer;
+                }
+
+            }
+        }    
+        @media screen and (max-width: 800px) {
+            .slide-content{ 
+                /*img{
+                width: 100%!important; 
+
+                height: 100%!important;
+                left: -100%;
+                right: -100%;
+                top: -100%;
+                bottom: -100%;
+            }*/
+            }
+        }
+    }
+
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes slidein{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
